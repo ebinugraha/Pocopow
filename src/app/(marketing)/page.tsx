@@ -3,6 +3,7 @@ import { MockDiscordUI } from "@/components/monk-discord-ui";
 import { Button } from "@/components/ui/button";
 import { AnimatedList } from "@/components/magicui/animated-list";
 import { DiscordMessage } from "@/components/discord-messaget";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -103,6 +104,62 @@ export default function Home() {
             <h2 className="text-center text-base/7 font-semibold text-[#E4632C] mb-2">Intuitive Monitoring</h2>
             <h1 className="text-center text-4xl font-bold text-[#000000]">Stay ahead with real-time insight</h1>
           </div>
+        
+          <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+              {/* first bento */}
+              <div className="relative lg:row-span-2">
+                  <div className="absolute inset-px rounded-lg bg-[#f6f7a8] lg:rounded-l-[2rem]"/>
+                  <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                    <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 mb-9">
+                      <p className="mt-2 text-lg/7 font-medium tracking-tight text-slate-900 max-lg:text-center">
+                        Real-time notification
+                      </p>
+                      <p className="mt-2 max-w-lg text-sm/7 text-gray-600 max-lg:text-center">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea fugit cum doloremque placeat voluptatem officiis eaque. 
+                      </p>
+                    </div>
+                    
+                    <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                      <div className="absolute inset-x-10 bottom-0 top-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                        <Image
+                          className="size-full object-cover object-top"
+                          src={"/phone-screen.png"}
+                          alt="Phone screen"
+                          fill
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-px rounded-lg shadow ring-1 lg:rounded-l-[2rem]"/>
+              </div>
+
+              {/* second bento */}
+
+              <div className="relative max-lg:row-start-1">
+                  <div className="absolute inset-px rounded-lg bg-[#f6f7a8] max-lg:rounded-t-[2rem]"/>
+                  <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                    <div className="px-8 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                      <p className="mt-2 text-lg/7 font-medium tracking-tight text-slate-900 max-lg:text-center">
+                        Real-time notification
+                      </p>
+                      <p className="mt-2 max-w-lg text-sm/7 text-gray-600 max-lg:text-center">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea fugit cum doloremque placeat voluptatem officiis eaque. 
+                      </p>
+                    </div>
+                    <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                      <Image
+                        className="w-full max-lg:max-w-xs"
+                        src={"/bento2.png"}
+                        alt="Bento box "
+                        width={500}
+                        height={300}
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute inset-px rounded-lg shadow ring-1 max-lg:rounded-t-[2rem]"/>
+              </div>
+          </div>
+
         </MaxWidthWrapper>
       </section>
     </>
